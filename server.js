@@ -20,7 +20,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 });
 const db = mongoose.connection;
 db.on("error", (err) => console.error(err));
-db.once("open", () => console.log("connected to mongoose"));
+db.once("open", () => console.log("Connected to Mongoose"));
 
 // app.use(indexRouter);
 app.use("/", indexRouter);
